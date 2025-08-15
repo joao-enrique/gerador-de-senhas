@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator - Pixel Art</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🔐 Password Generator</h1>
+
+    <div class="password-box">
+      <input type="text" id="password" readonly>
+      <button id="copy-btn"><i class='bx  bx-copy'  ></i> </button>
+    </div>
+
+    <div class="settings">
+      <label>
+        Password Length:
+        <input type="range" id="length" min="4" max="20" value="12">
+        <span id="length-value">12</span>
+      </label>
+
+      <label><input type="checkbox" id="uppercase" checked> Include Uppercase</label>
+      <label><input type="checkbox" id="lowercase" checked> Include Lowercase</label>
+      <label><input type="checkbox" id="numbers" checked> Include Numbers</label>
+      <label><input type="checkbox" id="symbols" checked> Include Symbols</label>
+    </div>
+
+    <button id="generate-btn" class="pixel-btn">Generate Password</button>
+
+    <div class="strength">
+      <p>Password Strength: <span id="strength-text">Strong</span></p>
+      <div class="strength-bar"><div id="strength-fill"></div></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
